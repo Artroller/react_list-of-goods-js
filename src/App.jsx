@@ -28,6 +28,10 @@ export const App = () => {
       setIsReversed(prev => !prev);
     } else if (isReversed) {
       sortedGoods.reverse();
+
+      if (activeSort !== null) {
+        setIsReversed(false);
+      }
     }
 
     setGoods(sortedGoods);
